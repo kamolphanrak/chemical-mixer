@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Mixing Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chemical Mixing Optimizer</h1>
+            <p>คำนวณและปรับสูตรการผสมสารเคมีเพื่อให้ได้ผลลัพธ์ที่ต้องการ</p>
+        </header>
+
+        <section class="form-section">
+            <h2>เลือกสารละลายเริ่มต้นและตั้งค่าเป้าหมาย</h2>
+
+            <!-- ฟอร์มให้กรอกค่าความเข้มข้นของ H⁺ -->
+            <label for="h-concentration">ความเข้มข้นของ H⁺ (mol/L):</label>
+            <input type="number" id="h-concentration" placeholder="ใส่ค่าความเข้มข้น H⁺" step="any">
+            <br>
+
+            <!-- ฟอร์มให้กรอกค่าความเข้มข้นของ OH⁻ -->
+            <label for="oh-concentration">ความเข้มข้นของ OH⁻ (mol/L):</label>
+            <input type="number" id="oh-concentration" placeholder="ใส่ค่าความเข้มข้น OH⁻" step="any">
+            <br>
+
+            <!-- ฟอร์มให้กรอกค่า pH -->
+            <label for="target">ตั้งค่า pH หรือความเข้มข้นเป้าหมาย:</label>
+            <input type="number" id="target" placeholder="ใส่ค่า pH หรือความเข้มข้น" required>
+            <br>
+
+            <button onclick="calculateMix()">คำนวณสูตรผสม</button>
+        </section>
+
+        <section id="result">
+            <h3>ผลลัพธ์</h3>
+            <p id="mix-output">กรุณาคำนวณสูตรผสมเพื่อดูผลลัพธ์</p>
+        </section>
+
+        <footer>
+            <p>Chemical Mixing Optimizer © 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
